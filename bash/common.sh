@@ -7,3 +7,8 @@
 # get array from output of jq reading a json key // devuelve el array con las keys del diccionario indicado por ENV_VAR2(tengo el cerbro frito y ahora no lo puedo escribir en ingles)
 #TODO: Explain it in English
 readarray -t ENV_VAR < <(cat /file | jq '.'${ENV_VAR2}' | keys[] ')
+
+# Loop through an array
+for element in "${ARRAY[@]}"; do
+    echo "array element: $element"
+done
